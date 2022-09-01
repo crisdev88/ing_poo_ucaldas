@@ -1,23 +1,46 @@
 package poo;
-import java.util.*;
+import java.util.Scanner;
+
 public class excercise1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner keyboard = new Scanner(System.in);
-		
-		System.out.println("Ingrese su animal favorito");
-		String  myAnimal = keyboard.nextLine();
 		
 		
-		if (myAnimal.equalsIgnoreCase("tortuga")) {
+		String animal = solicitarAnimal();
+		
+		String mensaje = evaluarAnimal(animal);
+		
+		System.out.println(mensaje);
+		
+	}
+	
+	
+	public static String evaluarAnimal(String animal) {	
+		
+		
+		
+		if (animal.equalsIgnoreCase("tortuga")) {		 
 			
-			System.out.println("También me gustan las tortugas");
-			
+			  
+			  return "También me gustan las tortugas";
+			  
 		}else		
 		{
-			System.out.println("Ese animal es genial, pero prefiero las tortugas");
-		}
+			return "Ese animal es genial, pero prefiero las tortugas";
+		}		
+		
+	}
+	
+	public static String solicitarAnimal() {
+		
+		Scanner keyboard = new Scanner(System.in);
+		
+		System.out.println("Ingrese un animal");
+		String  animal = keyboard.nextLine();
+		
+		
+		return animal;
 	}
 
 }

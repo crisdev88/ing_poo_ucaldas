@@ -59,6 +59,11 @@ public class excersice2 {
 	         }
 		
 		 }
+		 
+		 //instanciar una clase
+		 excercise1 animal = new excercise1();
+		 
+		 animal.main(args);
 	}
 
 }
